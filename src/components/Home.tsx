@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Casual from "./casual";
 import ChooseBanner from "./ChooseBanner";
 import Professional from "./professional";
@@ -6,8 +7,9 @@ function Home() {
     return ( 
         <div className="h-screen w-screen">
             <Professional />
-            <Casual/>
+            <Casual />
             <ChooseBanner />
+
         </div>
      );
 }

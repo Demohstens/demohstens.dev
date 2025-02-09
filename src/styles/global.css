@@ -1,13 +1,78 @@
 @import "tailwindcss";
 
 
+@layer base {
+  h1 {
+    font-family: 'work sans';
+  }
+}
+
+@layer components{
+  .casual h1 {
+    font-family: 'inter';
+
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    --wave-offset: 0;
+  }
+  25% {
+    --wave-offset: 5%;
+  }
+  50% {
+    --wave-offset: 5%;
+  }
+  75% {
+    --wave-offset: -5%;
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50%) translateX(calc(100vw - 10px));
+    opacity: 0; /* Fade out */
+  }
+}
+@keyframes float-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  80% {
+    transform: translateX(-0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animate-float-in {
+  font-weight: lighter;
+  animation: float-in 0.6s ease;
+}
+
+.particle {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 10px; /* Size of the particle */
+  height: 10px; /* Size of the particle */
+  background-color: rgba(255, 255, 0, 0.7); /* Color of the particle */
+  border-radius: 50%; /* Make it circular */
+  opacity: 0; /* Start invisible */
+  animation: fly 2s linear; /* Animation for flying */ 
+}
 .professional {
   position: absolute;
   width: 100vw;
   height: 100vh;
   clip-path: polygon(0 0, 60% 0, 50% 100%, 0% 100%);
 }
-
 .casual {
   position: absolute;
   width: 100vw;
@@ -16,9 +81,11 @@
 }
 
 .casual:hover {
+  animation: wave 3s ease infinite;
   transition-duration: 400ms;
   clip-path: polygon(43% 0, 100% 0%, 100% 100%, 45% 100%);
 }
+
 .casual h1 {
   scale: 1;
   transition: scale 400ms ease, transform 400ms ease;
@@ -53,4 +120,37 @@
 }
 .animate-wiggle {
   animation: wiggle 3s ease infinite;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'work sans';
+    src: url("../../public/fonts/WorkSans.ttf");
+  }
+  
+  @font-face {
+    font-family: 'inter';
+    src: url("../../public/fonts/Inter.ttf");
+  }
+  
+  @font-face {
+    font-family: 'nanum';
+    src: url("../../public/fonts/NanumPen.ttf");
+  }
+  @font-face {
+    font-family: 'bangers';
+    src: url('../../public/fonts/Bangers.ttf');
+  }
+  @font-face {
+    font-family: 'roboto-flex';
+    src: url('../../public/fonts/RobotoFlex.ttf');
+  }
+  @font-face {
+    font-family: 'noto-sans';
+    src: url('../../public/fonts/NotoSans.ttf');
+  }
+  @font-face {
+    font-family: 'lexend';
+    src: url('../../public/fonts/LexendDeca.ttf');
+  }
 }
