@@ -9,7 +9,16 @@ function Professional() {
                 setIsHovered(true);
             }
         } onMouseLeave={() => {setIsHovered(false)}}
-        onMouseDown={() => {window.location.href = '/professional'}}
+        onMouseDown={() => {
+            if (!document.startViewTransition) {
+                window.location.href = '/professional';
+            }
+        
+                document.startViewTransition(() => {
+
+                    window.location.href = '/professional';
+                })
+        }}
         >
         <h1 className="absolute left-5 top-1/5 text-[7rem] font-bold text-white">Professional</h1> 
         {isHovered && <p className="animate-float-in absolute left-5 bottom-2/5 text-xl font-bold text-white">Software Engineer with a passion on Overengineering</p>}
