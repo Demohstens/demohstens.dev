@@ -1,21 +1,18 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Home from '../components/Home';
+import Welcome from '../components/interactive.tsx';
+import Layout from '../layouts/Layout.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>Hello!</h1>
-			<p> hier gibt es nichts zu sehen.</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout>
+	<Home client:load />
+</Layout>
+
+<style>
+	:root {
+		overflow: hidden;
+	}
+</style>
