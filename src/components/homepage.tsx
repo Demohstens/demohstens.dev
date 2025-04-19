@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <>
-      <header className="flex items-end justify-center h-20 bg-black text-white">
+      <header className="flex items-end justify-center h-20 bg-gray-600 text-white">
         <h1 className="text-4xl font-bold mb-4">Matt's To-Do list</h1>
       </header>
       <div className="flex align-middle items-center justify-around flex-col h-screen ">
