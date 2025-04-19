@@ -18,7 +18,7 @@ export default function Home() {
         <div className="flex align-middle items-center justify-around flex-col h-full ">
           <TodoList />
         </div>
-        <footer className="flex items-center justify-center h-20 bg-gray-600 grow text-white">
+        <footer className="z-10 flex items-center justify-center h-20 bg-gray-600 grow text-white">
           <SocialLinks />
         </footer>
       </div>

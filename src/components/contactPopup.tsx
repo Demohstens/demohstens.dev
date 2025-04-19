@@ -6,7 +6,7 @@ function ContactPopup() {
   return (
     <div className="flex  h-screen items-center justify-center">
       <div
-        className="bg-gray-600 p-4 w-1/2 h-1/2 rounded-lg flex flex-col items-center justify-center"
+        className="bg-gray-600 p-4 w-9/10 xl:w-1/2 xl:h-1/2  rounded-lg flex flex-col items-center justify-center"
         onClick={(e) => {
           e.stopPropagation(); // Prevent click event from closing the overlay
         }}

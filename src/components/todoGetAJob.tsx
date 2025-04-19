@@ -27,7 +27,6 @@ export default function TodoGetAJob() {
         {showOverlay && origin && (
           <motion.div
             initial={{
-              
               opacity: 0,
             }}
             animate={{
@@ -50,15 +49,17 @@ export default function TodoGetAJob() {
       </AnimatePresence>
 
       <motion.div layout className="relative">
-        <div className="absolute left-200 -top-20 w-75">
-          <h1 className="font-bold text-4xl"> Help me check this off!</h1>
-        </div>
-        <div className="absolute left-130 -top-10 w-75 rotate-180">
-          <img
-            src="/images/arrow.png"
-            alt="arrow to 'get a job' todo item"
-            className="w-40 h-20"
-          />
+        <div className="hidden xl:block">
+          <div className="absolute left-200 -top-20 w-75">
+            <h1 className="font-bold text-4xl"> Help me check this off!</h1>
+          </div>
+          <div className="absolute left-130 -top-10 w-75 rotate-180">
+            <img
+              src="/images/arrow.png"
+              alt="arrow to 'get a job' todo item"
+              className="w-40 h-20"
+            />
+          </div>
         </div>
         <div ref={todoRef}>
           <div
@@ -81,9 +82,7 @@ export default function TodoGetAJob() {
             <span className="todo-title p-4 m-1 w-fit text-white text-xl font-bold">
               Get a job!
             </span>
-            <Button>
-              Fix this!
-            </Button>
+            <Button>Fix this!</Button>
           </div>
         </div>
       </motion.div>

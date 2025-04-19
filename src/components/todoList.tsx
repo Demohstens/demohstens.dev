@@ -21,7 +21,7 @@ export default function TodoList() {
 
 
     return (
-        <div className="p-2 border-black h-9/10 w-2/5 bg-gray-100 rounded-xl border-1 flex flex-col gap-2 scroll ">
+        <div className="p-2 border-black h-9/10 w-screen md:w-2/5 bg-gray-100 rounded-xl border-1 flex flex-col gap-2 scroll ">
             {todosPast.map((todo) => (
                 <TodoItem title={todo.title} completed={todo.completed} id={todo.id} onChecked={() => { }} onUnchecked={() => { }} />
             ))}
