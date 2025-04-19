@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Checkbox } from "./ui/checkbox";
 
-export default function TodoItem(props: {title: string, completed: boolean, id: number, onChecked?: Function, onUnchecked?: Function}) {
+import { type ReactNode } from "react";
+export default function TodoItem(props: {title: ReactNode, completed: boolean, id: number, onChecked?: Function, onUnchecked?: Function}) {
     const { onChecked, onUnchecked } = props;
     const  [checked, setChecked] = useState<boolean>(props.completed)
 
@@ -11,9 +12,10 @@ export default function TodoItem(props: {title: string, completed: boolean, id: 
     }
 
     return (
-        <div className="todo-item p-2 flex justify-start items-center rounded-md bg-gray-600" onClick={() => onToggle()}>
-            <Checkbox checked={checked} className="size-6"></Checkbox>
-            <span className="todo-title p-4 w-fit text-white text-xl font-bold">{props.title}</span>
+        <div className="todo-item p-2 m-1 flex justify-start items-center rounded-md bg-gray-600" >
+            {/* <Checkbox checked={checked} className="size-6"></Checkbox> */}
+            <input type="checkbox" checked={checked} onChange={() => onToggle()} className="size-6 rounded-md border-gray-500 bg-gray-500" />
+            <span className="todo-title p-3 w-fit text-white text-xl font-bold">{props.title}</span>
         </div>
     )
 }

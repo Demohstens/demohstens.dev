@@ -1,3 +1,4 @@
+import SocialLinks from "./SocialLinks";
 import TodoItem from "./todoItem";
 import TodoList from "./todoList";
 
@@ -10,11 +11,16 @@ export default function Home() {
 
   return (
     <>
-      <header className="flex items-end justify-center h-20 bg-gray-600 text-white">
-        <h1 className="text-4xl font-bold mb-4">Matt's To-Do list</h1>
-      </header>
-      <div className="flex align-middle items-center justify-around flex-col h-screen ">
-        <TodoList />
+      <div className="flex flex-col h-screen bg-gray-100">
+        <header className="flex items-end justify-center h-20 bg-gray-600 text-white">
+          <h1 className="text-4xl font-bold mb-4">Matt's To-Do list</h1>
+        </header>
+        <div className="flex align-middle items-center justify-around flex-col h-full ">
+          <TodoList />
+        </div>
+        <footer className="flex items-center justify-center h-20 bg-gray-600 grow text-white">
+          <SocialLinks />
+        </footer>
       </div>
     </>
   );
