@@ -11,7 +11,7 @@ function Home() {
             <ChooseBanner />
 
         </div>
-     );
+    );
 }
 
 export default Home;
