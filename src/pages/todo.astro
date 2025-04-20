@@ -1,18 +1,12 @@
 ---
 import Home from '../components/homepage/homepage';
 import Layout from '../layouts/Layout.astro';
+import Projects from './../components/projects/projects.tsx';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	
-	<Home client:load />
+	<Projects client:load />
 </Layout>
-
-<style>
-	:root {
-		overflow: hidden;
-	}
-</style>

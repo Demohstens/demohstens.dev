@@ -1,10 +1,10 @@
 import { useRef, useState } from "react";
 import TodoItem from "./todoItem";
 import { AnimatePresence, motion } from "motion/react";
-import SocialLink from "./socialLinke";
-import { Separator } from "./ui/separator";
-import ContactPopup from "./contactPopup";
-import { Button } from "./ui/button";
+import SocialLink from "../socialLinke";
+import { Separator } from "../ui/separator";
+import ContactPopup from "../contactPopup";
+import { Button } from "../ui/button";
 
 export default function TodoGetAJob() {
   const handleChecked = () => {
@@ -63,7 +63,7 @@ export default function TodoGetAJob() {
         </div>
         <div ref={todoRef}>
           <div
-            className="todo-item p-2 flex justify-start items-center rounded-md bg-gray-600"
+            className="todo-item p-2 flex justify-start items-center rounded-md bg-red-900 hover:bg-red-800 transition duration-200 ease-in-out cursor-pointer"
             onClick={() => {
               checked ? handleUnchecked() : handleChecked();
               setChecked(!checked);

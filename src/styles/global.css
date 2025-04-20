@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tailwindcss-animated";
 /* @import "tw-animate-css"; */
+/* @import "./animations.css"; */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -81,6 +82,15 @@
   font-weight: lighter;
   animation: float-in 0.6s ease;
 }
+.todo-item {
+  z-index: 10;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.todo-item:hover {
+  /* Remove animation, just use transform for smooth transition */
+  transform: scale(1.05) rotate(1deg);
+  z-index: 10;
+}
 
 .particle {
   position: absolute;
@@ -154,33 +164,33 @@
 @layer base {
   @font-face {
     font-family: 'work sans';
-    src: url("../../public/fonts/WorkSans.ttf");
+    src: url("/fonts/WorkSans.ttf");
   }
 
   @font-face {
     font-family: 'inter';
-    src: url("../../public/fonts/Inter.ttf");
+    src: url("/fonts/Inter.ttf");
   }
 
   @font-face {
     font-family: 'nanum';
-    src: url("../../public/fonts/NanumPen.ttf");
+    src: url("/fonts/NanumPen.ttf");
   }
   @font-face {
     font-family: 'bangers';
-    src: url('../../public/fonts/Bangers.ttf');
+    src: url('/fonts/Bangers.ttf');
   }
   @font-face {
     font-family: 'roboto-flex';
-    src: url('../../public/fonts/RobotoFlex.ttf');
+    src: url('/fonts/RobotoFlex.ttf');
   }
   @font-face {
     font-family: 'noto-sans';
-    src: url('../../public/fonts/NotoSans.ttf');
+    src: url('/fonts/NotoSans.ttf');
   }
   @font-face {
     font-family: 'lexend';
-    src: url('../../public/fonts/LexendDeca.ttf');
+    src: url('/fonts/LexendDeca.ttf');
   }
 }
 
