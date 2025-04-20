@@ -10,8 +10,8 @@ import {
 
 function Projects() {
   return (
-    <div className="absolute w-full h-full  border-2 bg-gray-900 border-gray-900 text-white p-4 m-2 gap-8 rounded-2xl">
-      <div className="grid grid-cols-3 ">
+    <div className="absolute w-full  flex justify-center lg:h-screen  border-2 bg-gray-900 border-gray-900 text-white p-4 m-2 gap-8 rounded-2xl">
+      <div className="grid lg:grid-cols-3 h-fit gap-4">
         <Card className="bg-gray-800 p-4 w-full max-w-md shadow-lg shadow-gray-600 hover:scale-101 transition-transform duration-300 ease-in-out">
           <CardTitle className="text-2xl font-bold text-center text-white mb-4">
             Sketchspace
